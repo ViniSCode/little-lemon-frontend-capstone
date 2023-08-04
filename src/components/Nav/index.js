@@ -1,6 +1,8 @@
+import "./styles.css";
+
 export function Nav() {
   return (
-    <nav>
+    <nav className="nav">
       <ul>
         <a href="/" role="navigation">
           <li>Home</li>

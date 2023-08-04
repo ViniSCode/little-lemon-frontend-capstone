@@ -1,0 +1,48 @@
+.mobile-menu-container nav {
+  display: block;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 50;
+  top: 0;
+  bottom: 0;
+  background-color: #495e57;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-menu-container nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.mobile-menu-container nav ul a {
+  font-weight: 500;
+  font-size: 20px;
+  gap: 2rem;
+  color: white;
+}
+
+.mobile-menu-container nav ul a:hover {
+  color: #f4ce14;
+  transition: color 0.2s ease;
+}
+
+.close-menu-icon {
+  color: white;
+  position: absolute;
+  z-index: 60;
+  top: 2.4rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+@media (min-width: 860px) {
+  .mobile-menu-container nav {
+    display: none;
+  }
+}

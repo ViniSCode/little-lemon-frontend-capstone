@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.maxw {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
