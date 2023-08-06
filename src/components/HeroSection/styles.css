@@ -1,0 +1,140 @@
+.hero {
+  background: #495e57;
+}
+
+.hero-container {
+  padding: 2.5rem 0.5rem;
+  background: #495e57;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: space-between;
+  position: relative;
+}
+
+.hero .hero-text {
+  max-width: 150px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: start; */
+  gap: 1.5rem;
+}
+
+.hero .hero-text .hero-title h1 {
+  color: #f4ce14;
+  font-family: Markazi Text;
+  font-size: 2.1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.hero .hero-text .hero-title h3 {
+  color: #fff;
+  font-family: Markazi Text;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.hero .hero-text p {
+  color: #fff;
+  font-family: Karla;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.hero .hero-text button {
+  border-radius: 16px;
+  background: #f4ce14;
+  color: black;
+  padding: 0 1rem 0 0;
+  width: fit-content;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: start;
+  border: none;
+}
+
+.hero .hero-image img {
+  position: relative;
+  width: 100%;
+}
+
+/* Media Query 1: Min-width 487px */
+@media (min-width: 330px) {
+  .hero .hero-text {
+    max-width: 200px;
+  }
+
+  .hero .hero-text .hero-title h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero .hero-text .hero-title h3 {
+    font-size: 1.5rem;
+  }
+
+  .hero .hero-text p {
+    font-size: 0.8125rem;
+  }
+
+  .hero .hero-text button {
+    font-size: 18px;
+  }
+}
+
+/* Media Query 1: Min-width 487px */
+@media (min-width: 487px) {
+  .hero-container {
+    padding: 2.5rem 1rem;
+    gap: 2rem;
+  }
+
+  .hero .hero-text {
+    max-width: 240px;
+  }
+
+  .hero .hero-text .hero-title h1 {
+    font-size: 3rem;
+  }
+
+  .hero .hero-text p {
+    font-size: 0.875rem;
+  }
+}
+
+/* Media Query 2: Min-width 860px */
+@media (min-width: 860px) {
+  .hero-container {
+    padding: 2.5rem 0.5rem;
+    align-items: start;
+  }
+
+  .hero .hero-text {
+    max-width: 250px;
+  }
+
+  .hero .hero-text .hero-title h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero .hero-text p {
+    font-size: 1.125rem;
+  }
+
+  .hero .hero-text button {
+    padding: 1rem;
+    width: 200px;
+  }
+
+  .hero .hero-image img {
+    position: absolute;
+    right: 0;
+    width: fit-content;
+  }
+}
