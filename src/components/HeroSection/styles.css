@@ -48,7 +48,7 @@
   line-height: normal;
 }
 
-.hero .hero-text button {
+.button {
   border-radius: 16px;
   background: #f4ce14;
   color: black;
@@ -83,7 +83,7 @@
     font-size: 0.8125rem;
   }
 
-  .hero .hero-text button {
+  .button {
     font-size: 18px;
   }
 }
@@ -127,9 +127,10 @@
     font-size: 1.125rem;
   }
 
-  .hero .hero-text button {
+  .button {
     padding: 1rem;
     width: 200px;
+    text-align: center;
   }
 
   .hero .hero-image img {

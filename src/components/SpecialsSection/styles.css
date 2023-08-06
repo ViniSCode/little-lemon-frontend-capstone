@@ -1,0 +1,34 @@
+.section {
+  margin-top: 1rem;
+  padding: 2.5rem 0.5rem;
+}
+
+.specials-menu {
+  display: flex;
+  items-align: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.specials-menu h2 {
+  font-size: 2rem;
+}
+
+/* Media Query 1: Min-width 487px */
+@media (min-width: 330px) {
+}
+
+/* Media Query 1: Min-width 487px */
+@media (min-width: 487px) {
+  .specials-menu h2 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Media Query 2: Min-width 860px */
+@media (min-width: 860px) {
+  .section {
+    margin-top: 5.5rem;
+    padding: 2.5rem 0.5rem;
+  }
+}

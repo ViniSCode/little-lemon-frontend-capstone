@@ -13,7 +13,7 @@ export function HeroSection() {
             We are a family owned Mediterranean restaurant, focused on
             traditional recipes served with a modern twist.
           </p>
-          <button>Reserve a Table</button>
+          <button className="button">Reserve a Table</button>
         </div>
         <div className="hero-image">
           <img src="./assets/hero.png" alt="Little lemon dish" />
