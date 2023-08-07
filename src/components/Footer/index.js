@@ -1,7 +1,7 @@
 export function Footer() {
   return (
     <footer className="maxw">
-      <img src="" alt="" />
+      {/* <img src="" alt="" /> */}
 
       <div>
         <h3>Doormat Navigation</h3>
