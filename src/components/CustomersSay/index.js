@@ -1,5 +1,5 @@
+import { FiStar } from "react-icons/fi";
 import "./styles.css";
-
 export function CustomersSay() {
   return (
     <section className="section testimonials">
@@ -8,20 +8,9 @@ export function CustomersSay() {
 
         <div className="testimonials-container">
           <div className="testimonials-card">
-            <span className="rating">Rating</span>
-            <div className="testimonials-image-name">
-              <img src="https://i.pravatar.cc/50" alt="avatar" />
-              <p className="name">John Doe</p>
-            </div>
-            <span className="review">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam sed
-              perspiciatis soluta sapiente fugit tempore veritatis. Minus
-              suscipit incidunt omnis dolores aliquid repudiandae rem?
+            <span className="rating">
+              <FiStar />5
             </span>
-          </div>
-
-          <div className="testimonials-card">
-            <span className="rating">Rating</span>
             <div className="testimonials-image-name">
               <img src="https://picsum.photos/536/354" alt="avatar" />
               <p className="name">John Doe</p>
@@ -34,9 +23,28 @@ export function CustomersSay() {
           </div>
 
           <div className="testimonials-card">
-            <span className="rating">Rating</span>
+            <span className="rating">
+              <FiStar />
+              4.8
+            </span>
             <div className="testimonials-image-name">
-              <img src="https://i.pravatar.cc/50" alt="avatar" />
+              <img src="https://picsum.photos/536/314" alt="avatar" />
+              <p className="name">John Doe</p>
+            </div>
+            <span className="review">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam sed
+              perspiciatis soluta sapiente fugit tempore veritatis. Minus
+              suscipit incidunt omnis dolores aliquid repudiandae rem?
+            </span>
+          </div>
+
+          <div className="testimonials-card">
+            <span className="rating">
+              <FiStar />
+              4.9
+            </span>
+            <div className="testimonials-image-name">
+              <img src="https://picsum.photos/536/334" alt="avatar" />
               <p className="name">John Doe</p>
             </div>
             <span className="review">
@@ -46,9 +54,12 @@ export function CustomersSay() {
             </span>
           </div>
           <div className="testimonials-card">
-            <span className="rating">Rating</span>
+            <span className="rating">
+              <FiStar />
+              4.7
+            </span>
             <div className="testimonials-image-name">
-              <img src="https://i.pravatar.cc/50" alt="avatar" />
+              <img src="https://picsum.photos/536/324" alt="avatar" />
               <p className="name">John Doe</p>
             </div>
             <span className="review">

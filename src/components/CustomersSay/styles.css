@@ -45,6 +45,9 @@
 
 .rating {
   font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .review {
