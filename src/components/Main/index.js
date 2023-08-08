@@ -1,11 +1,13 @@
+import { CustomersSay } from "../CustomersSay";
 import { HeroSection } from "../HeroSection";
-import { SpecialsSection } from "../SpecialsSection";
+import { Specials } from "../Specials";
 
 export function Main() {
   return (
     <main>
       <HeroSection />
-      <SpecialsSection />
+      <Specials />
+      <CustomersSay />
     </main>
   );
 }

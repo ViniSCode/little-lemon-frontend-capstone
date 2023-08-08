@@ -1,7 +1,7 @@
 import { DishesCards } from "./DishesCards";
 import "./styles.css";
 
-export function SpecialsSection() {
+export function Specials() {
   return (
     <section className="section maxw">
       <div className="specials-menu">
