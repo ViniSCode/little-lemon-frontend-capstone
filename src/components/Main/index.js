@@ -1,3 +1,4 @@
+import { Chicago } from "../Chicago";
 import { CustomersSay } from "../CustomersSay";
 import { HeroSection } from "../HeroSection";
 import { Specials } from "../Specials";
@@ -8,6 +9,7 @@ export function Main() {
       <HeroSection />
       <Specials />
       <CustomersSay />
+      <Chicago />
     </main>
   );
 }

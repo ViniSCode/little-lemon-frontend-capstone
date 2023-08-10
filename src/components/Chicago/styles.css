@@ -1,0 +1,158 @@
+.about {
+  margin-top: 5.125rem;
+  margin-bottom: 5.125rem;
+}
+
+.about-container {
+  padding: 2.5rem 0.5rem;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+  position: relative;
+}
+
+.about .about-text {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: start; */
+  gap: 1.5rem;
+  order: 1;
+}
+
+.about .about-text .about-title h1 {
+  color: #f4ce14;
+  font-family: Markazi Text;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.about .about-text .about-title h3 {
+  font-family: Markazi Text;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.about .about-text p {
+  font-family: Karla;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.button {
+  border-radius: 16px;
+  background: #f4ce14;
+  color: black;
+  padding: 0 1rem 0 0;
+  width: fit-content;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: start;
+  border: none;
+}
+
+.about-image {
+  max-width: 100%;
+  position: relative;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  max-width: 440px;
+  max-height: 440px;
+  object-fit: cover;
+  border-radius: 16px;
+  -webkit-filter: drop-shadow(2px 2px 5px #0000001f);
+  filter: drop-shadow(5px 5px 5px #0000001f);
+}
+
+/* Media Query 1: Min-width 487px */
+@media (min-width: 330px) {
+  .about .about-text {
+    max-width: 100%;
+  }
+
+  .about .about-text .about-title h1 {
+    font-size: 3rem;
+  }
+
+  .about .about-text .about-title h3 {
+    font-size: 2rem;
+  }
+
+  .about .about-text p {
+    font-size: 1rem;
+  }
+}
+
+/* Media Query 1: Min-width 487px */
+@media (min-width: 487px) {
+  .about-container {
+    padding: 2.5rem 1rem;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: space-between;
+  }
+
+  .about .about-text {
+    max-width: 240px;
+    order: 0;
+  }
+
+  .about .about-text .about-title h1 {
+    font-size: 3rem;
+  }
+
+  .about .about-text p {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width: 700px) {
+  .about .about-text {
+    max-width: 280px;
+    order: 0;
+  }
+
+  .about .about-text .about-title h1 {
+    font-size: 3.5rem;
+  }
+
+  .about .about-text .about-title h3 {
+    font-size: 2.2rem;
+  }
+
+  .about .about-text p {
+    font-size: 1rem;
+  }
+}
+
+/* Media Query 2: Min-width 860px */
+@media (min-width: 860px) {
+  .about-container {
+    padding: 2.5rem 0.5rem;
+    align-items: start;
+  }
+
+  .about .about-text {
+    max-width: 320px;
+  }
+
+  .about .about-text .about-title h1 {
+    font-size: 3.5rem;
+  }
+
+  .about .about-text p {
+    font-size: 1.125rem;
+  }
+}
