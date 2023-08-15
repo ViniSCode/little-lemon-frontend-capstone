@@ -1,6 +1,9 @@
+import { useModal } from "../../Hooks/useModal";
 import "./styles.css";
 
 export function HeroSection() {
+  const { setIsBookingModalOpen } = useModal();
+
   return (
     <section className="hero">
       <div className="maxw hero-container">
@@ -13,7 +16,12 @@ export function HeroSection() {
             We are a family owned Mediterranean restaurant, focused on
             traditional recipes served with a modern twist.
           </p>
-          <button className="button">Reserve a Table</button>
+          <button
+            className="button"
+            onClick={() => setIsBookingModalOpen(true)}
+          >
+            Reserve a Table
+          </button>
         </div>
         <div className="hero-image">
           <img src="./assets/hero.png" alt="Little lemon dish" />

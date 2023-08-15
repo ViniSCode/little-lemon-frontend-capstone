@@ -5,11 +5,13 @@ import { Specials } from "../Specials";
 
 export function Main() {
   return (
-    <main>
-      <HeroSection />
-      <Specials />
-      <CustomersSay />
-      <Chicago />
-    </main>
+    <>
+      <main>
+        <HeroSection />
+        <Specials />
+        <CustomersSay />
+        <Chicago />
+      </main>
+    </>
   );
 }
