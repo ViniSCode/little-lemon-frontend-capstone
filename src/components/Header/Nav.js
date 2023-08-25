@@ -1,8 +1,8 @@
-import "./styles.css";
+import styles from "./styles.module.css";
 
 export function Nav() {
   return (
-    <nav className="nav">
+    <nav className={styles.nav}>
       <ul>
         <a href="/" role="navigation">
           <li>Home</li>
@@ -19,9 +19,9 @@ export function Nav() {
         <a href="#order-online" role="navigation">
           <li>Order Online</li>
         </a>
-        <a href="/login" role="navigation">
+        {/* <a href="/login" role="navigation">
           <li>Login</li>
-        </a>
+        </a> */}
       </ul>
     </nav>
   );

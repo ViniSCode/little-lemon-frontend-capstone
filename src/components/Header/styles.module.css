@@ -1,9 +1,13 @@
 /* Common Styles */
-header {
+.header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 1rem;
+  max-width: 860px;
+  margin: 0 auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .nav {

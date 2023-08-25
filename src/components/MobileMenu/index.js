@@ -1,10 +1,11 @@
 import { FiX } from "react-icons/fi";
-import "./styles.css";
+import styles from "./styles.module.css";
+
 export function MobileMenu({ setIsMobileMenuOpen }) {
   return (
-    <div className="mobile-menu-container">
+    <div className={styles["mobile-menu-container"]}>
       <FiX
-        className="close-menu-icon"
+        className={styles["close-menu-icon"]}
         size={30}
         onClick={() => setIsMobileMenuOpen(false)}
       />
@@ -24,9 +25,6 @@ export function MobileMenu({ setIsMobileMenuOpen }) {
           </a>
           <a href="#order-online" role="navigation">
             <li>Order Online</li>
-          </a>
-          <a href="/login" role="navigation">
-            <li>Login</li>
           </a>
         </ul>
       </nav>

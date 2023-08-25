@@ -1,14 +1,13 @@
-import { useModal } from "../../Hooks/useModal";
-import "./styles.css";
-
+import { useModal } from "../../hooks/useModal";
+import styles from "./styles.module.css";
 export function HeroSection() {
   const { setIsBookingModalOpen } = useModal();
 
   return (
-    <section className="hero">
-      <div className="maxw hero-container">
-        <div className="hero-text">
-          <div className="hero-title">
+    <section className={styles.hero}>
+      <div className={styles["hero-container"]}>
+        <div className={styles["hero-text"]}>
+          <div className={styles["hero-title"]}>
             <h1>Little Lemon</h1>
             <h3>Chicago</h3>
           </div>
@@ -17,13 +16,13 @@ export function HeroSection() {
             traditional recipes served with a modern twist.
           </p>
           <button
-            className="button"
+            className={styles.button}
             onClick={() => setIsBookingModalOpen(true)}
           >
             Reserve a Table
           </button>
         </div>
-        <div className="hero-image">
+        <div className={styles["hero-image"]}>
           <img src="./assets/hero.png" alt="Little lemon dish" />
         </div>
       </div>

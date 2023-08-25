@@ -1,12 +1,12 @@
 import { DishesCards } from "./DishesCards";
-import "./styles.css";
+import styles from "./styles.module.css";
 
 export function Specials() {
   return (
-    <section className="section maxw">
-      <div className="specials-menu">
-        <h2>Specials</h2>
-        <button className="button">Online Menu</button>
+    <section className={styles.section}>
+      <div className={styles["specials-menu"]}>
+        <h2 className={styles.title}>Specials</h2>
+        <button className={styles.button}>Online Menu</button>
       </div>
 
       <DishesCards />

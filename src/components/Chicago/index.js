@@ -1,11 +1,11 @@
-import "./styles.css";
+import styles from "./styles.module.css";
 
 export function Chicago() {
   return (
-    <section className="about maxw">
-      <div className="about-container">
-        <div className="about-text">
-          <div className="about-title">
+    <section className={styles.about}>
+      <div className={styles["about-container"]}>
+        <div className={styles["about-text"]}>
+          <div className={styles["about-title"]}>
             <h1>Little Lemon</h1>
             <h3>Chicago</h3>
           </div>
@@ -15,11 +15,11 @@ export function Chicago() {
             dolores nemo exercitationem voluptatibus numquam rem aliquid.
           </p>
         </div>
-        <div className="about-image">
+        <div className={styles["about-image"]}>
           <img
             src="./assets/mario-adrian.png"
             alt=""
-            className="mario-adrian"
+            className={styles["mario-adrian"]}
           />
         </div>
       </div>

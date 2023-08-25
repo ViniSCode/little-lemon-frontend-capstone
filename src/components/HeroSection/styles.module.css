@@ -11,6 +11,8 @@
   gap: 0.5rem;
   justify-content: space-between;
   position: relative;
+  max-width: 860px;
+  margin: 0 auto;
 }
 
 .hero .hero-text {

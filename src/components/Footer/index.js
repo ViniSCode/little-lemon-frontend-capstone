@@ -1,15 +1,15 @@
-import "./styles.css";
+import styles from "./styles.module.css";
 
 export function Footer() {
   return (
-    <footer className="maxw footer">
+    <footer className={styles.footer}>
       <img
         src="./assets/footer-logo.png"
         alt="Little Lemon logo"
-        className="footer-logo"
+        className={styles["footer-logo"]}
       />
 
-      <div className="links-container">
+      <div className={styles["links-container"]}>
         <div>
           <h3>Doormat Navigation</h3>
           <ul>

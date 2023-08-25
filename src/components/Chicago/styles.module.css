@@ -1,6 +1,8 @@
 .about {
   margin-top: 5.125rem;
   margin-bottom: 5.125rem;
+  max-width: 860px;
+  margin: 0 auto;
 }
 
 .about-container {
