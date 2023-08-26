@@ -1,24 +1,16 @@
-export function generateRandomTimes(date) {
-  const result = [];
-  const m = 2 ** 35 - 31;
-  const a = 185852;
-  let s = date.getDate() % m;
+export function generateRandomTimes(selectedDate) {
+  const randomTimes = [];
+  let seed = selectedDate.getDate() % (2 ** 35 - 31);
 
-  function random() {
-    s = (s * a) % m;
-    return s / m;
+  const getRandom = () =>
+    (seed = (seed * 185852) % (2 ** 35 - 31)) / (2 ** 35 - 31);
+
+  for (let hour = 17; hour <= 23; hour++) {
+    if (getRandom() < 0.5) randomTimes.push(`${hour}:00`);
+    if (getRandom() < 0.5) randomTimes.push(`${hour}:30`);
   }
 
-  for (let i = 17; i <= 23; i++) {
-    if (random() < 0.5) {
-      result.push(i + ":00");
-    }
-    if (random() < 0.5) {
-      result.push(i + ":30");
-    }
-  }
-
-  return result;
+  return randomTimes;
 }
 
 export function submitAPI(formData) {
@@ -27,15 +19,11 @@ export function submitAPI(formData) {
 }
 
 export function updateTimes(state, action) {
-  switch (action.type) {
-    case "UPDATE_TIMES":
-      return { ...state, times: generateRandomTimes(action.date) };
-    default:
-      return state;
-  }
+  if (action.type === "UPDATE_TIMES")
+    return { ...state, times: generateRandomTimes(action.date) };
+  return state;
 }
 
 export function initializeTimes() {
-  const today = new Date();
-  return { times: generateRandomTimes(today) };
+  return { times: generateRandomTimes(new Date()) };
 }

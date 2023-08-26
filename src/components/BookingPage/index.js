@@ -6,10 +6,10 @@ import { useState } from "react";
 import { BookingForm } from "./BookingForm";
 export function BookingPage({ dispatch, availableTimes }) {
   const { setIsBookingModalOpen } = useModal();
-  const [date, setDate] = useState();
-  const [time, setTime] = useState();
-  const [numberOfGuests, setNumberOfGuests] = useState();
-  const [occasion, setOccasion] = useState();
+  const [date, setDate] = useState("");
+  const [time, setTime] = useState("");
+  const [numberOfGuests, setNumberOfGuests] = useState(1);
+  const [occasion, setOccasion] = useState("Birthday");
 
   function handleSubmitBooking(e) {
     e.preventDefault();
@@ -44,6 +44,8 @@ export function BookingPage({ dispatch, availableTimes }) {
         availableTimes={availableTimes}
         dispatch={dispatch}
         handleSubmitBooking={handleSubmitBooking}
+        numberOfGuests={numberOfGuests}
+        occasion={occasion}
       />
     </div>
   );
