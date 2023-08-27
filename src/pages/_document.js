@@ -1,4 +1,5 @@
 import { Head, Html, Main, NextScript } from "next/document";
+import Script from "next/script";
 
 export default function Document() {
   return (
@@ -22,6 +23,11 @@ export default function Document() {
           content="Discover a delightful culinary experience at Little Lemon, where flavor and freshness meet in perfect harmony. Our charming restaurant serves up a tantalizing array of delectable dishes that cater to every palate. Join us for a delightful journey through a world of exquisite flavors and warm hospitality."
         />
         <meta name="og:image" content="/assets/og-image.png" />
+
+        <Script
+          src="https://raw.githubusercontent.com/Meta-Front-End-Developer-PC/capstone/master/api.js"
+          strategy="beforeInteractive"
+        />
       </Head>
       <body>
         <Main />

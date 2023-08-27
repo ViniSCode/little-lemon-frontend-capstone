@@ -9,21 +9,17 @@ export function BookingPage({ dispatch, availableTimes }) {
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
   const [numberOfGuests, setNumberOfGuests] = useState(1);
-  const [occasion, setOccasion] = useState("Birthday");
+  const [occasion, setOccasion] = useState("");
 
   function handleSubmitBooking(e) {
     e.preventDefault();
-    console.log({
-      date,
-      time,
-      numberOfGuests,
-      occasion,
-    });
 
     if (!date || !time || !numberOfGuests || !occasion) {
       window.alert("Please fill in all fields.");
       return;
     }
+
+    console.log("submitted");
   }
 
   return (
@@ -46,6 +42,7 @@ export function BookingPage({ dispatch, availableTimes }) {
         handleSubmitBooking={handleSubmitBooking}
         numberOfGuests={numberOfGuests}
         occasion={occasion}
+        time={time}
       />
     </div>
   );

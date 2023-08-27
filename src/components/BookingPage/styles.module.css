@@ -78,6 +78,11 @@
   background-color: #0056b3;
 }
 
-.book-now {
+.booking-background input[type="submit"]:disabled {
+  background-color: #88898a;
+  pointer-events: none;
+}
+
+.booking-background h2 {
   margin-bottom: 2rem;
 }
