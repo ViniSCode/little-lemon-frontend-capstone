@@ -1,5 +1,4 @@
 import { Head, Html, Main, NextScript } from "next/document";
-import Script from "next/script";
 
 export default function Document() {
   return (
@@ -24,10 +23,11 @@ export default function Document() {
         />
         <meta name="og:image" content="/assets/og-image.png" />
 
-        <Script
+        {/* API ENDPOINT ISN'T AVAILABLE ANYMORE */}
+        {/* <Script
           src="https://raw.githubusercontent.com/Meta-Front-End-Developer-PC/capstone/master/api.js"
           strategy="beforeInteractive"
-        />
+        /> */}
       </Head>
       <body>
         <Main />

@@ -8,7 +8,7 @@ import {
 import "@testing-library/jest-dom/extend-expect"; // for toBeInTheDocument
 import { render, screen } from "@testing-library/react";
 
-test("Renders Input Fields text", () => {
+test("Render Fields", () => {
   render(
     <BookingPage
       availableTimes={{
@@ -18,8 +18,28 @@ test("Renders Input Fields text", () => {
     />
   );
 
-  const bookNowText = screen.getByText(/Book Now/i);
-  expect(bookNowText).toBeInTheDocument();
+  const dateLabel = screen.getByText("Select Date");
+  expect(dateLabel).toBeInTheDocument();
+  const dateInput = screen.getByTestId("booking-date");
+  expect(dateInput).toBeInTheDocument();
+
+  const timeLabel = screen.getByText("Select Time");
+  expect(timeLabel).toBeInTheDocument();
+  const timeInput = screen.getByTestId("booking-time");
+  expect(timeInput).toBeInTheDocument();
+
+  const guestLabel = screen.getByText("Number of guests");
+  expect(guestLabel).toBeInTheDocument();
+  const guestsInput = screen.getByTestId("number-of-guests");
+  expect(guestsInput).toBeInTheDocument();
+
+  const occasionLabel = screen.getByText("Select Occasion");
+  expect(occasionLabel).toBeInTheDocument();
+  const occasionInput = screen.getByTestId("occasion");
+  expect(occasionInput).toBeInTheDocument();
+
+  const submitButton = screen.getByDisplayValue("Make Your reservation");
+  expect(submitButton).toBeInTheDocument();
 });
 
 describe("BookingPage", () => {
