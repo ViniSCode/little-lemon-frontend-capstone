@@ -1,40 +1,43 @@
-export function generateRandomTimes(selectedDate) {
-  const randomTimes = [];
-  let seed = selectedDate.getDate() % (2 ** 35 - 31);
+const seededRandom = (seed) => {
+  const m = 2 ** 35 - 31;
+  const a = 185852;
+  let s = seed % m;
+  return function () {
+    return (s = (s * a) % m) / m;
+  };
+};
 
-  const getRandom = () =>
-    (seed = (seed * 185852) % (2 ** 35 - 31)) / (2 ** 35 - 31);
+export const fetchAPI = (date) => {
+  const result = [];
+  const random = seededRandom(date.getDate());
 
-  for (let hour = 17; hour <= 23; hour++) {
-    if (getRandom() < 0.5) randomTimes.push(`${hour}:00`);
-    if (getRandom() < 0.5) randomTimes.push(`${hour}:30`);
+  for (let i = 17; i <= 23; i++) {
+    if (random() < 0.5) {
+      result.push(i + ":00");
+    }
+    if (random() < 0.5) {
+      result.push(i + ":30");
+    }
   }
+  return result;
+};
 
-  return randomTimes;
-}
-
-export function submitAPI(formData) {
-  if (
-    !formData.date.trim() ||
-    !formData.time.trim() ||
-    !formData.numberOfGuests ||
-    !formData.occasion.trim()
-  ) {
-    window.alert("Please fill in all fields.");
-    console.log(formData);
-    return false;
-  }
-
-  console.log(formData);
+export const submitAPI = (formData) => {
+  if (!true) console.log(formData);
   return true;
-}
+};
 
-export function updateTimes(state, action) {
-  if (action.type === "UPDATE_TIMES")
-    return { ...state, times: generateRandomTimes(action.date) };
-  return state;
-}
+export const updateTimes = (state, action) => {
+  switch (action.type) {
+    case "UPDATE_TIMES":
+      return { ...state, times: fetchAPI(action.date) };
+    default:
+      return state;
+  }
+};
 
-export function initializeTimes() {
-  return { times: generateRandomTimes(new Date()) };
-}
+export const initializeTimes = () => {
+  // create a Date object to represent today's date
+  const today = new Date();
+  return { times: fetchAPI(today) };
+};

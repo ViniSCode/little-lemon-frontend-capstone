@@ -4,12 +4,19 @@ import styles from "./styles.module.css";
 import { useForm } from "@/hooks/useForm";
 import { useModal } from "@/hooks/useModal";
 import { submitAPI } from "@/utils/Time";
-import { useRouter } from "next/router";
 import { BookingForm } from "./BookingForm";
 export function BookingPage({ dispatch, availableTimes }) {
-  const router = useRouter();
   const { setIsBookingModalOpen } = useModal();
-  const { date, time, numberOfGuests, occasion } = useForm();
+  const {
+    date,
+    time,
+    numberOfGuests,
+    occasion,
+    setDate,
+    setTime,
+    setOccasion,
+    setNumberOfGuests,
+  } = useForm();
 
   function submitForm(e) {
     e.preventDefault();
@@ -27,8 +34,13 @@ export function BookingPage({ dispatch, availableTimes }) {
       occasion,
     });
 
+    setDate("");
+    setTime("");
+    setOccasion("");
+    setNumberOfGuests(1);
+
     if (submitAPIResult) {
-      router.push("/booking-confirmation");
+      window.location.replace("/booking-confirmation");
     }
   }
 

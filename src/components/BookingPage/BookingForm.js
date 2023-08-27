@@ -71,10 +71,7 @@ export function BookingForm({ availableTimes, submitForm, dispatch }) {
         type="submit"
         value="Make Your reservation"
         disabled={
-          time.trim() === "" ||
-          date.trim() === "" ||
-          numberOfGuests === 0 ||
-          occasion.trim() === ""
+          time === "" || date === "" || numberOfGuests === 0 || occasion === ""
         }
       />
     </form>
