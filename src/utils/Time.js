@@ -14,7 +14,18 @@ export function generateRandomTimes(selectedDate) {
 }
 
 export function submitAPI(formData) {
-  if (!true) console.log(formData);
+  if (
+    !formData.date.trim() ||
+    !formData.time.trim() ||
+    !formData.numberOfGuests ||
+    !formData.occasion.trim()
+  ) {
+    window.alert("Please fill in all fields.");
+    console.log(formData);
+    return false;
+  }
+
+  console.log(formData);
   return true;
 }
 

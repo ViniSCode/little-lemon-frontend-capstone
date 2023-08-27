@@ -1,24 +1,24 @@
+import { useForm } from "@/hooks/useForm";
 import { useEffect } from "react";
 
-export function BookingForm({
-  setDate,
-  setTime,
-  time,
-  setNumberOfGuests,
-  setOccasion,
-  date,
-  availableTimes,
-  handleSubmitBooking,
-  dispatch,
-  numberOfGuests,
-  occasion,
-}) {
+export function BookingForm({ availableTimes, submitForm, dispatch }) {
+  const {
+    date,
+    setDate,
+    time,
+    setTime,
+    numberOfGuests,
+    setNumberOfGuests,
+    occasion,
+    setOccasion,
+  } = useForm();
+
   useEffect(() => {
     dispatch({ type: "UPDATE_TIMES", date: new Date(date) });
   }, [date, dispatch]);
 
   return (
-    <form onSubmit={(event) => handleSubmitBooking(event)}>
+    <form onSubmit={(event) => submitForm(event)}>
       <h2 className="book-now">Book Now</h2>
       <label htmlFor="res-date">Choose Date</label>
       <input

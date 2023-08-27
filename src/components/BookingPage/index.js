@@ -1,17 +1,17 @@
 import { FiX } from "react-icons/fi";
 import styles from "./styles.module.css";
 
+import { useForm } from "@/hooks/useForm";
 import { useModal } from "@/hooks/useModal";
-import { useState } from "react";
+import { submitAPI } from "@/utils/Time";
+import { useRouter } from "next/router";
 import { BookingForm } from "./BookingForm";
 export function BookingPage({ dispatch, availableTimes }) {
+  const router = useRouter();
   const { setIsBookingModalOpen } = useModal();
-  const [date, setDate] = useState("");
-  const [time, setTime] = useState("");
-  const [numberOfGuests, setNumberOfGuests] = useState(1);
-  const [occasion, setOccasion] = useState("");
+  const { date, time, numberOfGuests, occasion } = useForm();
 
-  function handleSubmitBooking(e) {
+  function submitForm(e) {
     e.preventDefault();
 
     if (!date || !time || !numberOfGuests || !occasion) {
@@ -19,7 +19,17 @@ export function BookingPage({ dispatch, availableTimes }) {
       return;
     }
 
-    console.log("submitted");
+    // submit => form data
+    const submitAPIResult = submitAPI({
+      date,
+      time,
+      numberOfGuests,
+      occasion,
+    });
+
+    if (submitAPIResult) {
+      router.push("/booking-confirmation");
+    }
   }
 
   return (
@@ -32,17 +42,9 @@ export function BookingPage({ dispatch, availableTimes }) {
       </div>
 
       <BookingForm
-        setDate={setDate}
-        date={date}
-        setTime={setTime}
-        setNumberOfGuests={setNumberOfGuests}
-        setOccasion={setOccasion}
         availableTimes={availableTimes}
         dispatch={dispatch}
-        handleSubmitBooking={handleSubmitBooking}
-        numberOfGuests={numberOfGuests}
-        occasion={occasion}
-        time={time}
+        submitForm={submitForm}
       />
     </div>
   );

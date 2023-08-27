@@ -1,6 +1,4 @@
 import { BookingPage } from "@/components/BookingPage";
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
 import { Main } from "@/components/Main";
 import { useModal } from "@/hooks/useModal";
 import { initializeTimes, updateTimes } from "@/utils/Time";
@@ -12,9 +10,7 @@ export default function Home() {
 
   return (
     <div>
-      <Header />
       <Main />
-      <Footer />
       {isBookingModalOpen && (
         <BookingPage availableTimes={availableTimes} dispatch={dispatch} />
       )}
