@@ -2,7 +2,7 @@ import styles from "./styles.module.css";
 
 export function Chicago() {
   return (
-    <section className={styles.about}>
+    <section className={styles.about} id="about">
       <div className={styles["about-container"]}>
         <div className={styles["about-text"]}>
           <div className={styles["about-title"]}>

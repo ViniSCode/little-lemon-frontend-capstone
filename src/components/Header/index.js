@@ -10,8 +10,10 @@ export function Header() {
   return (
     <>
       <header className={styles.header}>
-        <img src="/assets/little-lemon-logo.png" alt="Little Lemon" />
-        <Nav />
+        <div className={styles.headerContainer}>
+          <img src="/assets/little-lemon-logo.png" alt="Little Lemon" />
+          <Nav />
+        </div>
         <FiMenu
           className={styles["open-menu-icon"]}
           size={30}

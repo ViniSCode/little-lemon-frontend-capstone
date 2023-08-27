@@ -1,13 +1,31 @@
 /* Common Styles */
 .header {
   display: flex;
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  right: 0;
   align-items: center;
   justify-content: space-between;
-  padding: 0 1rem;
-  max-width: 860px;
+  background-color: white;
+  padding: 1rem 1rem;
   margin: 0 auto;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.247);
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 860px;
+}
+
+.headerContainer img {
+  display: block;
 }
 
 .nav {

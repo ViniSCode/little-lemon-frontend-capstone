@@ -9,7 +9,7 @@ export default function Home() {
   const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes());
 
   return (
-    <div>
+    <div id="home">
       <Main />
       {isBookingModalOpen && (
         <BookingPage availableTimes={availableTimes} dispatch={dispatch} />

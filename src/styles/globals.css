@@ -21,6 +21,10 @@ a {
   font-family: "Karla", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 ul {
   list-style: none;
 }
