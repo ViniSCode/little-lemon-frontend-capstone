@@ -1,6 +1,7 @@
+
 # Front-End Developer Capstone Course
 
-This Booking App was created as the final capstone project of the **Meta Front-End Developer Certification**.
+This Website was created as the final project of the **Meta Front-End Developer Program**.
 
 # Setup (Next.js)
 
@@ -17,3 +18,10 @@ This Booking App was created as the final capstone project of the **Meta Front-E
  # Run Tests with jest -> run in the terminal
  npm test
 ```
+
+## Website Preview 
+Check out the **Little Lemon App** in action! 
+### [LITTLE LEMON PREVIEW  👈](https://little-lemon-frontend-capstone.vercel.app/)
+
+# Layout Preview
+![enter image description here](https://github.com/ViniSCode/little-lemon-frontend-capstone/blob/main/public/assets/little-lemon-preview.png?raw=true)
