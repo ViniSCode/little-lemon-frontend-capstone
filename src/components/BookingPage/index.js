@@ -1,7 +1,7 @@
 import { FiX } from "react-icons/fi";
 import styles from "./styles.module.css";
 
-import { useForm } from "../../hooks/useForm";
+import {useForm} from "../../hooks/useForm"
 import { useModal } from "../../hooks/useModal";
 import { submitAPI } from "../../utils/Time";
 import { BookingForm } from "./BookingForm";
