@@ -1,4 +1,4 @@
-import { useModal } from "@/hooks/useModal";
+import { useModal } from "../../hooks/useModal";
 import styles from "./styles.module.css";
 export function HeroSection() {
   const { setIsBookingModalOpen } = useModal();

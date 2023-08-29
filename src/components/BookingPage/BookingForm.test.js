@@ -1,12 +1,12 @@
-import { BookingPage } from "@/components/BookingPage";
+import "@testing-library/jest-dom/extend-expect"; // for toBeInTheDocument
+import { render, screen } from "@testing-library/react";
 import {
   fetchAPI,
   initializeTimes,
   submitAPI,
   updateTimes,
-} from "@/utils/Time";
-import "@testing-library/jest-dom/extend-expect"; // for toBeInTheDocument
-import { render, screen } from "@testing-library/react";
+} from "../../utils/Time";
+import { BookingPage } from "../BookingPage/index";
 
 test("Render Fields", () => {
   render(

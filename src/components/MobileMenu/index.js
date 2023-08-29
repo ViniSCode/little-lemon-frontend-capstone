@@ -27,7 +27,7 @@ export function MobileMenu({ setIsMobileMenuOpen }) {
       />
       <nav>
         <ul>
-          <a href="#home" role="navigation" onClick={() => scrollTo("home")}>
+          <a href="#" role="navigation" onClick={() => scrollTo("home")}>
             <li>Home</li>
           </a>
           <a href="#about" role="navigation" onClick={() => scrollTo("about")}>
